@@ -1,1 +1,10 @@
-<h1>{{title}}</h1><!--viene del app.component-->
+<!--montamos los nuevos componetes-->
+<header>
+    <h1>{{title}}</h1><!--viene del app.component Y RECIBE EL btnClick-->
+    <app-boton 
+        color="green" 
+        text="Agregar Tarea"
+        (btnClick)="toggleAddTask()"
+        >
+    </app-boton>
+</header>
