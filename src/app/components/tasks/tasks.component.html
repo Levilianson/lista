@@ -1,0 +1,7 @@
+<!-- TRAIGO LA LISTA DE TAREA DESDE EL MOCK-->
+<app-task-item 
+    *ngFor="let task of tasks"
+    [task] = "task"
+>
+    {{task.text}}
+</app-task-item>

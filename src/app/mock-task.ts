@@ -2,10 +2,10 @@
 import {Task} from "./Task"
 
 //EN ESTE CASO SE CREAN TAREAS SIMULANDO BASE DE DATOS
-export const TASK: Task[]=[
+export const TASKS: Task[]=[
     {
         id: 1,
-        text: "listados",
+        text: "LISTADOS",
         day:'Agosto 5 12:00',
         reminder: true
     },
