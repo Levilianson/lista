@@ -1,5 +1,11 @@
 <!--PARA LOGRAR QUE FUNCIONE EL TASKS RECIBE EL TASK:TEXT-->
 <div class="task">
-    <h3>{{task.text}}</h3>
-    <P>{{task.day}}</P>
+    <h3>{{task.text}} 
+        <fa-icon 
+            [icon]="faTimes"
+            [ngStyle]="{'color':'red'}"
+        ></fa-icon></h3>
+    <P>
+        {{task.day}}
+    </P>
 </div>
