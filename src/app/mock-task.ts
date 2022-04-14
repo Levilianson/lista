@@ -2,6 +2,7 @@
 import {Task} from "./Task"
 
 //EN ESTE CASO SE CREAN TAREAS SIMULANDO BASE DE DATOS
+//CON LA BASE SIMULADA SE LO LLEVA AL db:json
 export const TASKS: Task[]=[
     {
         id: 1,

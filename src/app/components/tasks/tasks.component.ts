@@ -1,8 +1,9 @@
 // SE IMPORTAN LAS LISTAS DEL TASK LA INTERFACE
 import { Component, OnInit } from '@angular/core';
-import { TASKS } from 'src/app/mock-task';
-import { Task } from 'src/app/Task';
+//import { TASKS } from 'src/app/mock-task'; //SE LO UTILIZAN DESDE EL SERVICE
 
+import { Task } from 'src/app/Task';
+import { TaskService } from 'src/app/service/task.service';
 
 @Component({
   selector: 'app-tasks',
@@ -11,10 +12,17 @@ import { Task } from 'src/app/Task';
 })
 export class TasksComponent implements OnInit {
   //NICIALIZA LA LISTA COMO UN ARRAY
-  tasks: Task[] = TASKS;
-  constructor() { }
+  //tasks: Task[] = TASKS; //CON EL SERVICE AHORA ES VACIO
+  tasks: Task[] = [];
+  constructor(
+    private taskService: TaskService
+  ) { }
 
   ngOnInit(): void {
+    //PROMESAS DE CLICKEAR
+    this.taskService.getTasks().subscribe((tasks)=>(
+      this.tasks = tasks
+    ));
   }
 
 }
