@@ -1,36 +1,33 @@
-
 {
-    "task":[
-        {
-            "id": 1,
-            "text": "LISTADOS",
-            "day":"Agosto 5 12:00",
-            "reminder": true
-        },
-        {
-            "id": 2,
-            "text": "VISUALES",
-            "day":"Agosto 5 17:00",
-            "reminder": true
-        },
-        {
-            "id": 3,
-            "text": "CARACTULAS",
-            "day":"Agosto 5 19:00",
-            "reminder": true
-        },
-        {
-            "id": 4,
-            "text": "PERRUNAS",
-            "day":"Agosto 5 22:00",
-            "reminder":false
-        },
-        {
-            "id": 5,
-            "text": "GATURROS",
-            "day":"Agosto 13 24:00",
-            "reminder":false
-        }
-    
-    ]
+  "task": [
+    {
+        "id": 1,
+        "text": "LISTADOS",
+        "day": "Agosto 5 12:00",
+        "reminder": true
+      },
+      {
+        "id": 2,
+        "text": "VISUALES",
+        "day": "Agosto 5 17:00",
+        "reminder": true
+      },
+      {
+        "id": 3,
+        "text": "CARACTULAS",
+        "day": "Agosto 5 19:00",
+        "reminder": true
+      },
+      {
+        "id": 4,
+        "text": "PERRUNAS",
+        "day": "Agosto 5 22:00",
+        "reminder": false
+      },
+      {
+        "id": 5,
+        "text": "GATURROS",
+        "day": "Agosto 12 22:00",
+        "reminder": true
+      }  ]
 }

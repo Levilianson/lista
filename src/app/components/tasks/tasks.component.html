@@ -1,7 +1,12 @@
-<!-- TRAIGO LA LISTA DE TAREA DESDE EL MOCK-->
+<!-- BOTON DE AGREGAR TAREAS -->
+<app-add-task></app-add-task>
+<!-- TRAIGO LA LISTA DE TAREA DESDE EL MOCK UNA VEZ ACTIVADO EL SERVIDOR
+LO HACE DESDE JSON, AHORA SE BORRA -- ONTOGLE-->
 <app-task-item 
     *ngFor="let task of tasks"
     [task] = "task"
+    (onDeleteTask)="deleteTask(task)"
+    (onToggleReminder)="toggleReminder(task)"
 >
     {{task.text}}
 </app-task-item>
