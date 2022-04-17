@@ -1,16 +1,16 @@
 import { Injectable } from '@angular/core';
-import { Task } from 'src/app/Task';
-import { TASKS } from 'src/app/mock-task';
+import { Task } from '../Task';
+import { TASKS } from '../mock-task';
 //PARA VER SI UN METODO ES SICRONICO O NO
 import { Observable,of } from 'rxjs';
 //IMPORTAMOS PARA QQUE LEA DESDE OTRA POSICION
-import{HttpClient, HttpHandler, HttpHeaders} from '@angular/common/http'
+import{HttpClient, HttpHeaders} from '@angular/common/http'
 
 //REMPLAZAR OBJETOS QUE SE LE MANDE SE AÑADE ARRIBA, SE ESPECIFICA
 // QUE ES DEL TIPO JSON EL ARCHIVO QUE SE RECIBE AL SERVIDOR
 const httpOptions= {
   headers: new HttpHeaders({
-    'Content-Type':'applation/json'
+    'Content-Type':'application/json'
   })
 }
 @Injectable({
@@ -18,7 +18,7 @@ const httpOptions= {
 })
 export class TaskService {
   //PARA UTILIZAR EL HTTP
-  private apiUrl = ' http://localhost:5000/task'
+  private apiUrl = ' http://localhost:5000/tasks'
 
   constructor(
     private http:HttpClient
@@ -43,5 +43,9 @@ export class TaskService {
   updateTaskReminder(task:Task): Observable<Task>{
     const url =`${this.apiUrl}/${task.id}`
     return this.http.put<Task>(url, task, httpOptions)
+  }
+
+  addTask(task:Task): Observable<Task>{
+    return this.http.post<Task>(this.apiUrl, task, httpOptions)
   }
 }

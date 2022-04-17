@@ -1,5 +1,7 @@
 <!-- BOTON DE AGREGAR TAREAS -->
-<app-add-task></app-add-task>
+<app-add-task
+    (onAddTask)="addTask($event)"
+></app-add-task>
 <!-- TRAIGO LA LISTA DE TAREA DESDE EL MOCK UNA VEZ ACTIVADO EL SERVIDOR
 LO HACE DESDE JSON, AHORA SE BORRA -- ONTOGLE-->
 <app-task-item 
@@ -8,5 +10,5 @@ LO HACE DESDE JSON, AHORA SE BORRA -- ONTOGLE-->
     (onDeleteTask)="deleteTask(task)"
     (onToggleReminder)="toggleReminder(task)"
 >
-    {{task.text}}
+    <!--{{task.text}}-->
 </app-task-item>

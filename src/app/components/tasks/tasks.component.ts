@@ -2,8 +2,8 @@
 import { Component, OnInit } from '@angular/core';
 //import { TASKS } from 'src/app/mock-task'; //SE LO UTILIZAN DESDE EL SERVICE
 
-import { Task } from 'src/app/Task';
-import { TaskService } from 'src/app/service/task.service';
+import { Task } from '../../Task';
+import { TaskService } from '../../service/task.service';
 
 @Component({
   selector: 'app-tasks',
@@ -36,6 +36,13 @@ export class TasksComponent implements OnInit {
     //console.log(task.reminder) // PARA CHEQUEO POR LA CONSOLA
     //PARA ACTUALIZAR LA BASE DE DATOS.
     this.taskService.updateTaskReminder(task).subscribe();
+  }
+
+  addTask(task:Task){
+   // console.log(task);//PARA VERIFICAR QUE FUNCIONE
+    this.taskService.addTask(task).subscribe((task)=>(
+      this.tasks.push(task)
+    ))
   }
 
 }

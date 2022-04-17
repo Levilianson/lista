@@ -2,9 +2,10 @@
 <header>
     <h1>{{title}}</h1><!--viene del app.component Y RECIBE EL btnClick-->
     <app-boton 
-        color="green" 
-        text="Agregar Tarea"
+        color="{{showAddTask ? 'red':'green'}}" 
+        text="{{showAddTask ? 'close Task' : 'Add Task'}}" 
         (btnClick)="toggleAddTask()"
+        *ngIf="hasRoute('/')"
         >
     </app-boton>
 </header>
